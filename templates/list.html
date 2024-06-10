@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+<style>
+table, th, td {
+  border:1px solid black;
+}
+</style>
+<body>
+<h2>Student Results</h2>
+<table id="demo", style="width:100%">
+  <tr>
+    <th>Name</th>
+    <th>Mark</th> 
+  </tr>
+  {% for u in usr %}
+  <tr>
+    <td>{{ u[0] }}</td>
+    <td>{{ u[1] }}</td>
+  </tr>
+  {% endfor %}
+  </table>
+  <p><a href="{{ url_for('index') }}">Go back to start page</a></p>
+  <p>
